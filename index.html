@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+        <script src="func.js" type="module"></script>
+    </head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ddddff;
+            height: 100vh;
+            width: 100vw;
+        }
+        .page {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 480px;
+            background: #fff;
+        }
+        .info-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px;
+            background: #f4f5f5;
+            border-bottom: 1px solid #c8c9ca;
+        }
+        .icon {
+            margin-bottom: 4px;
+            height: 48px;
+            width: 48px;
+            background: #e8e8eb;
+            border: 1px solid #c8c9ca;
+            border-radius: 100px;
+        }
+        .chat-content {
+            flex: 1;
+            padding: 0 16px;
+            overflow-y: scroll;
+        }
+        .line {
+            margin-top: 10px;
+            display: flex;
+        }
+        .chat-box {
+            padding: 12px;
+            border-radius: 24px;
+            max-width: 240px;
+            background: #e8e8eb;
+        }
+        .mine {
+            background: #0a81fe;
+            color: white;
+            margin-left: auto;
+        }
+        .msg-content {
+            display: flex;
+            flex-direction: row;
+            margin: 8px 16px;
+            padding: 4px;
+            background: #fff;
+            border: 1px solid #c8c9ca;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+        #input {
+            flex: 1;
+            padding: 0 8px;
+            border: none;
+            outline: none;
+        }
+        #send {
+            width: 32px;
+            height: 32px;
+            background: #0a81fe;
+            border: none;
+            border-radius: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        #send > .material-icons {
+            font-size: 20px;
+        }
+    </style>
+
+    <body>
+        <div class="page">
+            <div class="info-content">
+                <div class="icon"></div>
+                <span>Ai</span>
+            </div>
+            <div class="chat-content">
+                <div class="line">
+                    <span class="chat-box mine">안녕?</span>
+                </div>
+                <div class="line">
+                    <div class="chat-box">안녕!</div>
+                </div>
+            </div>
+            <div class="msg-content">
+                <input type="text" id="input" placeholder="Message" />
+                <button id="send" type="submit">
+                    <span class="material-icons"> arrow_upward </span>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
